@@ -10,6 +10,8 @@
 }
 
 body {
+    --red: hsl(4, 100%, 67%);
+
     font-family: 'Roboto', sans-serif;
     background-color: hsl(235, 18%, 26%);
 
@@ -80,11 +82,12 @@ body {
 
 }
 
-.email-box div:nth-child(2){
+.error-message{
     font-size:x-small;
     font-weight: 700;
-    margin-right:1.3rem ;
-    visibility: hidden;
+    margin-right:1.3rem;
+    color: var(--red);
+    display: none ;
     
 
 }
@@ -101,6 +104,7 @@ body {
     margin-bottom: 1rem;
     border-radius: 0.3rem;
     cursor: pointer;
+    /* outline: none; */
 
 }
 
@@ -111,11 +115,22 @@ body {
     color: white ;
     background-color: hsl(238, 20%, 24%);
     cursor: pointer;
+    /* outline: none; */
+    
     
 }
 
 .btn-box:hover{
-    background-color: hsl(4, 100%, 67%);
+    /* background-color: hsl(4, 100%, 67%); */
+    background: var(--red);
+    background: linear-gradient(90deg, rgba(255,0,0,1) 42%, rgba(255,149,0,1) 100%);
+    box-shadow: 13px 13px 64px 5px rgba(255,98,87,1);
+    color:rgba(255, 255, 255, 0.766);
+    outline: none;
+    border: none;
+    /* opacity: 0.5; */
+    /* -webkit-box-shadow: -6px 20px 30px 6px rgba(255,98,87,1);
+    -moz-box-shadow: -6px 20px 30px 6px rgba(255,98,87,1); */
 }
 
 .btn-box a {
@@ -146,4 +161,11 @@ body {
     margin-top: 1.2rem;
     /* margin-left: 2.2rem; */
     padding: 1rem 5rem;
+}
+
+.error input{
+    color: red;
+    background-color: var(--red);
+    outline-color: var(--red);
+    opacity: 0.4;
 }
